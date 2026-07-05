@@ -3,11 +3,18 @@ body {
   text-align: center;
   background: #0f0f0f;
   color: #00ffcc;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 20px 16px 40px;
+  box-sizing: border-box;
 }
 
 h1 {
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 2.5em;
   color: #ff00ff;
   text-shadow: 0 0 10px #ff00ff;
@@ -18,9 +25,8 @@ h1 {
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   gap: 10px;
-  margin: 40px auto;
-  margin-left: 600px;
-  margin-top: 90px;
+  margin: 32px auto 24px;
+  width: fit-content;
 }
 
 .cell {
@@ -70,6 +76,28 @@ button:hover {
   font-weight: bold;
   color: #ffd166;
   text-shadow: 0 0 8px rgba(255, 209, 102, 0.5);
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+    margin-top: 10px;
+  }
+
+  #board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+    margin: 24px auto 20px;
+  }
+
+  .cell {
+    font-size: 2em;
+  }
+
+  #status {
+    font-size: 1.2em;
+  }
 }
 
 .draw-glow {
